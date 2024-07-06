@@ -1,0 +1,13 @@
+package com.hyena.selffinance.domain.repository
+
+import com.hyena.selffinance.domain.ExpenditureItemCategory
+import org.springframework.data.jpa.repository.JpaRepository
+
+/**
+ * @Description
+ * @Owner hyunseo
+ * @Date 6/29/24
+ */
+interface ExpenditureItemCategoryRepository : JpaRepository<ExpenditureItemCategory, Long> {
+    fun existsAllBy(ids: List<Long>): Boolean
+}
